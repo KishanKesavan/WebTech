@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        form{
+            display: table;
+            width : 100%;
+            height: 100vh;
+            text-align: center;
+        }
+        div.form-container{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        body{
+            margin: 0 !important;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<script type="application/javascript">
+    function display(form) {
+        var filename = form.filename.value.trim();
+        form.filename.value = "";
+
+        //Check if filename is entered
+        if(!filename){
+            alert("Please enter filename.");
+            return;
+        }
+        var info = JSON.parse(getInfo(filename));
+
+        //Check if contains truck data
+        if(!('Row' in  info.Mainline.Table)){
+            alert("File does not contain trucking company entries. Please enter a new filename.");
+            return;
+        }
+        var htmlContent = "<html><head><style>td,th,table{border: 1px solid black;}</style><title>Top Trucking Companies</title></head><body><table style='width:97vw;'><colgroup><col span='2' style='width:10%'><col style='width:30%;'><col style='width:5%'><col style='width:15%'><col style='width:30%;'></colgroup>";
+        htmlContent+= "<tr>";
+        for(var i=0;i< info.Mainline.Table.Header.Data.length;++i){
+            htmlContent+= "<th>"+info.Mainline.Table.Header.Data[i]+"</th>";
+        }
+        htmlContent+="</tr>";
+        for(var i=0; i< info.Mainline.Table.Row.length;++i){
+            var row = info.Mainline.Table.Row[i];
+            htmlContent+= "<tr>";
+            htmlContent += "<td>" + row.Company +"</td>";
+            htmlContent += "<td>" + row.Services+"</td>";
+            htmlContent += "<td>";
+            if(row.Hubs.Hub.length === 0){
+                htmlContent += "";
+            }else{
+                htmlContent+= "<ul>";
+                for(var j=0; j<row.Hubs.Hub.length; ++j){
+                    if(j === 0){
+                        htmlContent+="<li><b>"+row.Hubs.Hub[j]+"</b></li>";
+                        continue;
+                    }
+                    htmlContent+="<li>"+row.Hubs.Hub[j]+"</li>";
+                }
+                htmlContent+= "</ul>";
+            }
+            htmlContent +="</td>";
+            htmlContent += "<td>" + row.Revenue +"</td>";
+            htmlContent += "<td><a href='" + row.HomePage+"'>"+row.HomePage+"</a></td>";
+            htmlContent += "<td style='text-align: center;'><img src='"+row.Logo+"' style='height: 80%;width: 80%;max-height: 150px'/></td>";
+            htmlContent+="</tr>";
+        }
+        htmlContent += "</table></body></html>";
+        var newWindow = window.open("","_blank");
+        newWindow.document.write(htmlContent);
+    }
+
+    function getInfo(filename) {
+        var xmlHttpRequest = new XMLHttpRequest();
+        xmlHttpRequest.open('GET',filename,false);
+        xmlHttpRequest.send();
+        //Check if filename is present
+        if(xmlHttpRequest.status === 404){
+            alert("Requested file is not available. Please enter a new filename.");
+        }
+        return xmlHttpRequest.responseText;
+    }
+</script>
+<form action="" autocomplete="off" onkeypress="return event.keyCode !== 13;">
+    <div class="form-container">
+    <b>Enter URL for Trucking List JSON File</b><br><br>
+    <input spellcheck="false"  id="filename" type="text" name="filename"><br><br>
+    <input type="button" value='Submit Query' onclick="display(this.form);">
+    </div>
+</form>
+
+</body>
+</html>

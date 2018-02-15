@@ -1,0 +1,192 @@
+html{
+    height : 100%;
+    width : 100%;
+    overflow-y: scroll;
+}
+body{
+    font-family: sans-serif;
+    color:#625E5E;
+    text-shadow: 0.25px 0.5px #00000052;
+}
+
+div.main-container{
+    display: inline-block;
+}
+
+/*Header*/
+
+div.header{
+    text-align: center;
+}
+div.header span{
+    padding-top: 15px;
+    text-align: left;
+    display: block;
+    margin-left: 12%;
+    font-size: 11px;
+}
+div.header div.heading {
+    font-size: 42px;
+    letter-spacing: 12px;
+    text-shadow: none;
+    color : #BE9C58;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/*Menu*/
+
+div.menu hr{
+    border-color : #aba1a14d;
+}
+div.menu div.items{
+    margin-left : 8%;
+    margin-right : 8%;
+}
+div.menu div.item{
+    font-size: 12px;
+    text-align: center;
+    width:18%;
+    display: inline-block;
+    padding : 5px 0;
+}
+div.menu div.item a {
+    color:#625E5E;
+    text-decoration: none;
+}
+div.menu div.item a:hover{
+    color: #BE9C58;
+}
+
+/*Info*/
+div.info{
+    display: inline-block;
+    padding : 50px 0;
+}
+
+div.info img{
+    margin : 10px;
+}
+div.info div.left-container{
+    width: 50%;
+    float: left;
+}
+div.info div.right-container{
+    width : 50%;
+    float: right;
+}
+div.info div.content-container{
+    margin: 0 auto;
+    width : 80%;
+    text-align: center;
+}
+div.info div.link a{
+    text-decoration: none;
+    color : #332f2f;
+    font-weight: bold;
+}
+div.info div.link a:hover{
+    color : #D2D4D5;
+    text-shadow: 0.25px 0.5px #000000de;
+}
+div.info div.restaurant{
+    width: 60%;
+    padding-bottom: 60px;
+    text-align: left;
+    margin-left: 5%;
+}
+div.info div.quotes{
+    font-size: 35px;
+    font-style: italic;
+    text-shadow: none;
+    color : #BE9C58;
+}
+div.info div.details
+{
+    font-size : 17px;
+    padding : 12px 0;
+}
+
+/*Order*/
+div.order{
+    padding-bottom: 80px;
+    text-align: center;
+}
+div.order div.overlap{
+    position : relative;
+    bottom : 370px;
+    margin: 0 auto;
+    text-align:center;
+    background: white;
+    padding : 30px 60px;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.5;
+}
+div.order div.overlap span{
+    display: inline-block;
+    font-size: 8px;
+    letter-spacing: 1.2px;
+}
+div.order a.order-link{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    color : #625E5E;
+}
+div.order a.order-link:hover{
+    color : #D2D4D5;
+    text-shadow: 0.25px 0.5px #000000de;
+}
+div.order div.review{
+    text-align: center
+}
+div.order div.review span.mag
+{
+    position: relative;
+    bottom: 30px;
+}
+div.order div.review span.mag-review{
+    padding: 10px 0;
+    font-size: 35px;
+    font-style: italic;
+    color : #BE9C58;
+}
+
+/*Copyright*/
+
+div.plain-image {
+    height: 200px;
+    background-color: #BC9B5C;
+    text-align: right;
+}
+div.plain-image p.copyright{
+    position: relative;
+    display: inline-block;
+    top: 36px;
+    right: 132px;
+    font-size: 13px;
+    color: #ECF3F9;
+    font-weight: bolder;
+}
+
+/*Back images*/
+
+section.img1 {
+    background-image: url("http://cs-server.usc.edu:45678/hw/hw3/images/image6.jpg");
+}
+
+section.back-image.img2 {
+    background-image: url("http://cs-server.usc.edu:45678/hw/hw3/images/image5.jpg");
+}
+
+section.back-image {
+    height: 500px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
