@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/searchResultsBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Search Results"
+        app:theme="@style/ToolbarStyle"
+        app:titleTextColor="@android:color/white" />
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/placesList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.83"
+        android:padding="10dp" />
+
+
+    <LinearLayout
+        android:id="@+id/buttonParent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/previousButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/previousButton" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/nextButton" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noSearchResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/noSearch" />
+
+</LinearLayout>
+

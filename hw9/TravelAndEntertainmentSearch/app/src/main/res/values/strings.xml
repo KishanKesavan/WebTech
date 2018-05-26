@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">TravelAndEntertainmentSearch</string>
+
+    <string name="preference_favorites_key">70b983e2-4978-11e8-842f-0ed5f89f718b</string>
+
+    //Search form
+    <string name="tab_text_1">Search</string>
+    <string name="searchResults">Search Results</string>
+    <string name="search_activity_name">Places Search</string>
+    <string name="keyword">Keyword</string>
+    <string name="keyword_hint">Enter keyword</string>
+    <string name="category">Category</string>
+    <string-array name="categoryTypes">
+        <item>Default</item>
+        <item>Airport</item>
+        <item>Amusement Park</item>
+        <item>Aquarium</item>
+        <item>Art Gallery</item>
+        <item>Bakery</item>
+        <item>Bar</item>
+        <item>Beauty Salon</item>
+        <item>Bowling Alley</item>
+        <item>Bus Station</item>
+        <item>Cafe</item>
+        <item>Campground</item>
+        <item>Car Rental</item>
+        <item>Casino</item>
+        <item>Lodging</item>
+        <item>Movie Theater</item>
+        <item>Museum</item>
+        <item>Night Club</item>
+        <item>Park</item>
+        <item>Parking</item>
+        <item>Restaurant</item>
+        <item>Shopping Mall</item>
+        <item>Stadium</item>
+        <item>Subway Station</item>
+        <item>Taxi Stand</item>
+        <item>Train Station</item>
+        <item>Transit Station</item>
+        <item>Travel Station</item>
+        <item>Zoo</item>
+    </string-array>
+    <string name="distance">Distance (in miles)</string>
+    <string name="distanceHint">Enter distance (default 10 miles)</string>
+    <string name="locationLabel">From</string>
+    <string name="currentLocationLabel">Current Location</string>
+    <string name="customLocationLabel">Other. Specify Location</string>
+    <string name="customLocationHint">Type in the Location</string>
+    <string name="searchButton">Search</string>
+    <string name="clearButton">Clear</string>
+    <string name="validationError">Please enter mandatory field</string>
+
+    //Favorites
+    <string name="tab_text_2">Favorites</string>
+
+    //Places
+    <string name="previousButton">Previous</string>
+    <string name="nextButton">Next</string>
+
+    <string name="action_settings">Settings</string>
+
+    //Details
+    <string name="infoTab">INFO</string>
+    <string name="photoTab">PHOTOS</string>
+    <string name="mapTab">MAP</string>
+    <string name="reviewTab">REVIEWS</string>
+
+    <string name="addressLabel">Address</string>
+    <string name="phoneNumberLabel">Phone Number</string>
+    <string name="priceLevelLabel">Price Level</string>
+    <string name="ratingLabel">Rating</string>
+    <string name="googlePageLabel">Google Page</string>
+    <string name="websiteLabel">Website</string>
+    <string name="noReviews">No Reviews</string>
+    <string name="noFavorites">No Favorites</string>
+    <string name="noSearch">No Results</string>
+
+    <string-array name="reviewTypes">
+        <item>Google reviews</item>
+        <item>Yelp reviews</item>
+    </string-array>
+
+    <string-array name="sortTypes">
+        <item>Default order</item>
+        <item>Highest rating</item>
+        <item>Lowest rating</item>
+        <item>Most recent</item>
+        <item>Least recent</item>
+    </string-array>
+
+    <string name="travelMode">Travel Mode</string>
+
+    <string-array name="travelModes">
+        <item>Driving</item>
+        <item>Bicycling</item>
+        <item>Transit</item>
+        <item>Walking</item>
+    </string-array>
+
+</resources>

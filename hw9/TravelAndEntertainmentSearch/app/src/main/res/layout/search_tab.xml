@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/keywordLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/keyword" />
+
+    <TextView
+        android:id="@+id/keywordError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/validationError"
+        android:textColor="#F56F66"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/keyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/keyword_hint"
+        android:inputType="text"
+        android:background="@drawable/edittext_bottom_line"/>
+
+    <TextView
+        android:id="@+id/categoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/category" />
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/distanceLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/distance" />
+
+    <EditText
+        android:id="@+id/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/distanceHint"
+        android:inputType="number"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edittext_bottom_line"/>
+
+    <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/locationLabel" />
+
+    <RadioGroup
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/currentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/currentLocationLabel" />
+
+        <RadioButton
+            android:id="@+id/customLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/customLocationLabel" />
+
+        <TextView
+            android:id="@+id/customLocationError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/validationError"
+            android:textColor="#F56F66"
+            android:visibility="invisible" />
+
+        <AutoCompleteTextView
+            android:id="@+id/customLocationInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bottom_line"
+            android:enabled="false"
+            android:hint="@string/customLocationHint"
+            android:inputType="textPostalAddress" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/searchButton" />
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/clearButton" />
+    </LinearLayout>
+
+</LinearLayout>

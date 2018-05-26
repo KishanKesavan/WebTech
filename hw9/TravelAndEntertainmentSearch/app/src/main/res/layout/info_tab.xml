@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <LinearLayout
+        android:id="@+id/addressRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/addressLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/addressLabel"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/addressInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phoneRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/phoneLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/phoneNumberLabel"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/phoneInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:autoLink="phone"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/priceRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/priceLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/priceLevelLabel"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/priceInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ratingRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/ratingLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/ratingLabel"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+            <RatingBar
+                android:id="@+id/ratingInput"
+                style="@android:style/Widget.Holo.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:theme="@style/RatingBar"
+                android:max="5"
+                android:maxHeight="50dp"
+                android:minHeight="28dp"
+                android:numStars="5"
+                android:rating="4.49"
+                android:stepSize="0.1" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/googlePageRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/googlePageLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/googlePageLabel"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/googlePageInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:autoLink="web" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/websiteRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/websiteLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/websiteLabel"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/websiteInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:autoLink="web"/>
+    </LinearLayout>
+
+</LinearLayout>

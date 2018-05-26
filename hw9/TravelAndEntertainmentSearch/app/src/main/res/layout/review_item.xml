@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reviewItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="20dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/reviewImage"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:layout_editor_absoluteY="25dp">
+
+        <TextView
+            android:id="@+id/reviewerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00AA8D" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RatingBar
+                android:id="@+id/reviewRating"
+                style="@android:style/Widget.Holo.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:max="5"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:theme="@style/RatingBar" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reviewDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/reviewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
